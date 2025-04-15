@@ -22,11 +22,9 @@ headers = {
 response = requests.get(url, headers=headers)
 
 if response.status_code == 200:
-
-
-    data = response.json()
+    data = response.json() #Sparar josn
     #print(json.dumps(data, indent=2))  # Snygg struktur
-    for todo in data['data']:
+    for todo in data['data']: #Data 
         print(f"🔸 {todo['text']}")
 
     #int(f"{'✅' if is_owner else '❌'} {ch['name']} → {ch['_id']}")
